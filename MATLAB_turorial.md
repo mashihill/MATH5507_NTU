@@ -22,15 +22,15 @@
 
 *   Command window
 
-*   >> 1
-*   >> 1+2*3
-*   >> 5^9
-*   >> (12-5)/3
-*   >> sin(5)
-*   >> cos(pi)
-*   >> sin(cos(log(10)))
-*   try it!
-*   >> log(e)
+    >> 1
+    >> 1+2*3
+    >> 5^9
+    >> (12-5)/3
+    >> sin(5)
+    >> cos(pi)
+    >> sin(cos(log(10)))
+    try it!
+    >> log(e)
 
 _<u>What is the error message?</u>_
 
@@ -300,7 +300,7 @@ _<u>What is the error message?</u>_
 
 [](http://bime-matlab.blogspot.tw/)http://bime-matlab.blogspot.tw/
 
-ptt MATLABH
+ptt MATLAB版
 
 ## Question
 
