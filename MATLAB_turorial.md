@@ -1,5 +1,7 @@
 # MATH5507: Hands-on MATLAB tutorial
 
+_This is a class note for TA session of MATH5507 (Introduction to Financial Mathematics)_
+
 ## Outline
 
 *   Why MATLAB?
