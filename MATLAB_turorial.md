@@ -241,7 +241,8 @@ i.e. for example: `euCall(100, 90)` , so that it can be "called" by others (peop
     >> W = M(:, 6)
     >> x = log(W(2:end)./W(1:end-1))
     >> histogram(x)
-    >> kstest(x)
+
+    ~~>> kstest(x)~~
     function [mean variance] = BM(n,t)
         for i=1:n
             x=[0:1/t:1];
