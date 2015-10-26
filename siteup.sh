@@ -4,6 +4,7 @@ HOST='ceiba.ntu.edu.tw'
 USER=$1
 PASSWD=$2
 FILE='hw.html'
+sed -i '' "s/\(Last updated\).*</Last updated: $(date '+%Y-%m-%d %H:%M')</g" $FILE
 # Start of ftp command
 ftp -n $HOST > /tmp/ftp.worked 2> /tmp/ftp.failed <<END_SCRIPT
 user $USER $PASSWD
