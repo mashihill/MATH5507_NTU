@@ -1,5 +1,5 @@
 #! /bin/sh
-echo Uploading .........
+echo Deploying ....
 HOST='ceiba.ntu.edu.tw'
 USER=$1
 PASSWD=$2
@@ -8,7 +8,6 @@ FILE='hw.html'
 ftp -n $HOST > /tmp/ftp.worked 2> /tmp/ftp.failed <<END_SCRIPT
 user $USER $PASSWD
 cd hw_html
-ascii
 put $FILE
 get $FILE retrieval.$$
 bye
