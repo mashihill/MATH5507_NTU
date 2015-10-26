@@ -8,7 +8,7 @@
       MathJax.Hub.Config({
         tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]},
         "HTML-CSS": { scale: 130},
-        extensions: ["color.js"]
+        // extensions: ["color.js"]
 
     });
   </script>
@@ -33,7 +33,15 @@
 <script>
   $(function(){
     anchors.add('h3');
-});
+
+    $('.due-date').each(function(){
+        console.log('hi');
+        if (Date.parse($(this).data('due')) < Date.now()) {
+            $(this).css('text-decoration', 'line-through');
+        };
+    })
+
+  });
 </script>
 </head>
 <body>
@@ -50,19 +58,6 @@
   </div>
   <hr>
 
-  <h3 id="quiz2">Quiz 2 </h3>
-  <ol>
-      <li>
-          $\color{red}{E[W^{(n)}(t_i)]}=?$
-      </li>
-      <li>
-          $\color{red}{Var[W^{(n)}(t_i)]}=?$
-      </li>
-  </ol>
-  <p>For the definition of $W^{(n)}(t_i)$, please see p.29 on textbook.</p>
-
-  <p class="text-danger"><em>due date: 10/26 24:00</em></p>
-  <hr>
 
   <h3>Homework 4 </h3>
   <ol>
@@ -79,8 +74,24 @@
           ch2-exercise #7
       </li>
   </ol>
-  <p class="text-danger"><em>due date: 11/2 10:00 AM</em></p>
+  <p class="text-danger due-date" data-due="2015-11-02T10:00+08:00"><em>due date: 11/2 10:00 AM</em></p>
   <hr>
+  
+
+  <h3 id="quiz2">Quiz 2 </h3>
+  <ol>
+      <li>
+          $\color{red}{E[W^{(n)}(t_i)]}=?$
+      </li>
+      <li>
+          $\color{red}{Var[W^{(n)}(t_i)]}=?$
+      </li>
+  </ol>
+  <p>For the definition of $W^{(n)}(t_i)$, please see p.29 on textbook.</p>
+
+  <p class="text-danger due-date" data-due="2015-10-26T24:00+08:00"><em>due date: 10/26 24:00</em></p>
+  <hr>
+
 
   <h3>Quiz 1 </h3>
   <p>
