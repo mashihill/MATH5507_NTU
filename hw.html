@@ -1,97 +1,153 @@
 <!DOCTYPE html>
 <html>
-  <head>
+<head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
     <script src='https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML'></script>
     <script type="text/x-mathjax-config">
       MathJax.Hub.Config({
-        tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}
-      });
-    </script>
+        tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]},
+        "HTML-CSS": { scale: 130}  
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-    <!-- Latest compiled and minified CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    });
+  </script>
 
-    <!-- Latest compiled and minified JavaScript -->
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/1.3.0/anchor.js"></script>
 
-    <title>數理金融導論 - 作業</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
 
-    <style type="text/css">
+  <!-- Latest compiled and minified JavaScript -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+
+  <title>數理金融導論 - 作業</title>
+
+  <style type="text/css">
     #hw-submit {float: right;}
     #last-update {float: right;}
-    </style>
-  </head>
-  <body>
+    #counter {display: none;}
+</style>
+
+<script>
+  $(function(){
+    anchors.add('h3');
+});
+</script>
+</head>
+<body>
   <div class="container">
 
-        <h2>數理金融導論
+    <h2>數理金融導論
         <a id="hw-submit" class="btn btn-success" href="https://ceiba.ntu.edu.tw/modules/hw/hw.php?current_lang=chinese&csn=eaa7a7" role="button">交作業 (CEIBA) <span class="glyphicon glyphicon-file" aria-hidden="true"></span></a>
-        </h2>
-        <small><span class="glyphicon glyphicon-ok-circle" aria-hidden="true"></span>: 批改完, 作業觀摩開放.</small> <small id="last-update">Last updated: 2015/10/21, 11:50 PM</small>
+    </h2>
+    <small><span class="glyphicon glyphicon-ok-circle" aria-hidden="true"></span>: 批改完, 作業觀摩開放.</small> <small id="last-update">Last updated: 2015/10/26, 4:05 PM</small>
 
-        <div style="display:none" class="alert alert-info alert-dismissible" role="alert">
-          <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-          <strong>作業一</strong> 已開放作業觀摩.
-        </div>
-    <hr>
-    <h3>Quiz 1 </h3>
-    <p>
+    <div style="display:none" class="alert alert-info alert-dismissible" role="alert">
+      <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+      <strong>作業一</strong> 已開放作業觀摩.
+  </div>
+  <hr>
+
+  <h3 id="quiz2">Quiz 2 </h3>
+  <ol>
+      <li>
+          $E[e^{W^{(n)}(t_i)}] = ?$
+      </li>
+      <li>
+          $Var[e^{W^{(n)}(t_i)}] = ?$
+      </li>
+  </ol>
+  <p>For the definition of $W^{(n)}(t_i)$, please see p.29 on textbook.</p>
+
+  <p class="text-danger"><em>due date: 10/26 24:00</em></p>
+  <hr>
+
+  <h3>Homework 4 </h3>
+  <ol>
+      <li>
+          Show that $\lim\limits_{n\to\infty}E[e^{\alpha W^{(n)}(t_i)}] = e^{\frac{\alpha^{2}t_i}{2}} (=E[e^{\alpha W_{t_i}}])$
+      </li>
+      <li>
+          ch2-exercise #4
+      </li>
+      <li>
+          ch2-exercise #6
+      </li>
+      <li>
+          ch2-exercise #7
+      </li>
+  </ol>
+  <p class="text-danger"><em>due date: 11/2 10:00 AM</em></p>
+  <hr>
+
+  <h3>Quiz 1 </h3>
+  <p>
     <strong>[ time change Brownian motion ]</strong> 
     Last week in class we defined that the (marginal) distribution of the Brownian motion is $B_t ∼\mathcal{N}(0, t)$ and its moment generating function. <br>
     Given a Gamma process (see <a target="_blank" href="https://en.wikipedia.org/wiki/Gamma_process">Wiki definition</a>) $\Gamma(t;\gamma,\lambda)$, we now consider a time change Brownian motion 
     $W_{\Gamma(t;\gamma,\lambda)}$. The random time o’clock $\Gamma(t;\gamma,\lambda)$ is used to model rapid or slow market activity during a trading day. What is the moment generating function of $W_{\Gamma(t;\gamma,\lambda)}$? <br>
     That is, what is $E[e^{\theta W_{\Gamma(t;\gamma,\lambda)}}]$? (Hint: conditioning on the gamma process is useful.)
-    </p>
+</p>
 
-    <p class="text-danger"><del><em>due date: 10/19 24:00</em></del></p>
-    <hr>
-    <h3>Homework 3 </h3>
-    <ol>
-      <li>
-        (a) ch2-exercise #1<br>
-        (b) Goodness of fit test (normality test)
-      </li>
-      <li>
-        ch2-exercise #2
-      </li>
-      <li>
-        ch2-exercise #3
-      </li>
-    </ol>
-    <p class="text-danger"><em>due date: 10/26 10:00 AM</em></p>
-    <hr>
-
-    <h3>Homework 2 <small><span class="glyphicon glyphicon-ok-circle" aria-hidden="true"></span></small></h3>
-    <ol>
-    <li>Given $C_t = E^{*}[e^{-r(T-t)}(S_T-K)^{+}\mid S_t]$ and $P_t = E^{*}[e^{-r(T-t)}(K-S_T)^{+} \mid S_t]$. <br>
-<strong>Show that</strong>: $C_t-P_t=S_t-Ke^{-r(T-t)}$ <br>
-<em>Hint</em>: $For_s(t, T)=S_te^{r(T-t)}=E^*[S_T \mid S_t]$
+<p class="text-danger"><del><em>due date: 10/19 24:00</em></del></p>
+<hr>
+<h3>Homework 3 </h3>
+<ol>
+  <li>
+    (a) ch2-exercise #1<br>
+    (b) Goodness of fit test (normality test)
 </li>
+<li>
+    ch2-exercise #2
+</li>
+<li>
+    ch2-exercise #3
+</li>
+</ol>
+<p class="text-danger"><del><em>due date: 10/26 10:00 AM</em></del></p>
+<hr>
 
-<li>ch1-exercise #6</li>
-<li>ch1-exercise #7</li>
-<li>ch1-exercise #8</li>
-<li>ch1-exercise #9</li>
+<h3>Homework 2 <small><span class="glyphicon glyphicon-ok-circle" aria-hidden="true"></span></small></h3>
+<ol>
+    <li>Given $C_t = E^{*}[e^{-r(T-t)}(S_T-K)^{+}\mid S_t]$ and $P_t = E^{*}[e^{-r(T-t)}(K-S_T)^{+} \mid S_t]$. <br>
+        <strong>Show that</strong>: $C_t-P_t=S_t-Ke^{-r(T-t)}$ <br>
+        <em>Hint</em>: $For_s(t, T)=S_te^{r(T-t)}=E^*[S_T \mid S_t]$
+    </li>
+
+    <li>ch1-exercise #6</li>
+    <li>ch1-exercise #7</li>
+    <li>ch1-exercise #8</li>
+    <li>ch1-exercise #9</li>
 </ol>
 
-    <p class="text-danger"><del><em>due date: 10/12 10:00 AM</em></del></p>
-    <hr>
+<p class="text-danger"><del><em>due date: 10/12 10:00 AM</em></del></p>
+<hr>
 
-    <h3>Homework 1 <small><span class="glyphicon glyphicon-ok-circle" aria-hidden="true"></span></small></h3>
-    <p>
-      Please do Exercise 1,2, and 5 on page 21 of the book. 
+<h3>Homework 1 <small><span class="glyphicon glyphicon-ok-circle" aria-hidden="true"></span></small></h3>
+<p>
+  Please do Exercise 1,2, and 5 on page 21 of the book. 
 
-For the first question, it will be useful to read page 18 and the first half of 
-page 19 for the introduction of options. 
+  For the first question, it will be useful to read page 18 and the first half of 
+  page 19 for the introduction of options. 
 
-The length of your answers to the first two questions (Exercises 1 and 2) 
-should be limited. Each question takes at most one page A4 size.  
-    </p>
-    <p class="text-danger"><del><em>due date: 10/5 10:00 AM</em></del></p>
-    <hr>
-  </div>
-  </body>
+  The length of your answers to the first two questions (Exercises 1 and 2) 
+  should be limited. Each question takes at most one page A4 size.  
+</p>
+<p class="text-danger"><del><em>due date: 10/5 10:00 AM</em></del></p>
+<hr>
+</div>
+
+<!-- hitwebcounter Code START -->
+<div id="counter">
+<a href="http://www.hitwebcounter.com" target="_blank">
+    <img src="http://hitwebcounter.com/counter/counter.php?page=6210344&style=0007&nbdigits=5&type=page&initCount=0" title="URL Counter" Alt="URL Counter"   border="0" >
+</a>                                        <br/>
+<!-- hitwebcounter.com --><a href="http://www.hitwebcounter.com" title="Web Tracker" 
+target="_blank" style="font-family: sans-serif, Arial, Helvetica; 
+font-size: 12px; color: #6E7A76; text-decoration: underline ;"><em>Web Tracker                                        </em>
+</a>   
+</div>
+
+</body>
 </html>
