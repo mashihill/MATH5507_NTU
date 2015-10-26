@@ -33,9 +33,9 @@
 <script>
   $(function(){
     anchors.add('h3');
+    console.log('%c 想幹嘛!!@O@a ', 'background: #222; color: red; font-size: 20px');
 
     $('.due-date').each(function(){
-        console.log('ho');
         if (Date.parse($(this).data('due')) < Date.now()) {
             $(this).css('text-decoration', 'line-through');
         };
