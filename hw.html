@@ -39,7 +39,14 @@
         if (Date.parse($(this).data('due')) < Date.now()) {
             $(this).css('text-decoration', 'line-through');
         };
-    })
+    });
+
+    $('.popup-ans').on("shown.bs.popover",function () {
+        console.log('hihi');
+      MathJax.Hub.Queue(["Typeset",MathJax.Hub,this.getAttribute("data-target")]);
+    });
+
+    $('[data-toggle="popover"]').popover();
 
   });
 </script>
@@ -50,7 +57,7 @@
     <h2>數理金融導論
         <a id="hw-submit" target="_blank" class="btn btn-success" href="https://ceiba.ntu.edu.tw/modules/index.php?csn=eaa7a7&default_fun=hw" role="button">交作業 (CEIBA) <span class="glyphicon glyphicon-file" aria-hidden="true"></span></a>
     </h2>
-    <small><span class="glyphicon glyphicon-ok-circle" aria-hidden="true"></span>: 批改完, 作業觀摩開放.</small> <small id="last-update">Last updated: 2015-10-27 03:32</small>
+    <small><span class="glyphicon glyphicon-ok-circle" aria-hidden="true"></span>: 批改完, 作業觀摩開放.</small> <small id="last-update">Last updated: 2015-10-27 15:45</small>
 
     <div style="display:none" class="alert alert-info alert-dismissible" role="alert">
       <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
@@ -78,7 +85,10 @@
   <hr>
 
 
-  <h3 id="quiz2">Quiz 2 </h3>
+  <h3 id="quiz2">Quiz 2 
+  <small><a class="popup-ans" tabindex="0" role="button" data-toggle="popover" data-trigger="focus" data-html="true" data-content="1. $0$<br>2. $t_i$">Answer</a></small>
+  <small><span class="glyphicon glyphicon-ok-circle" aria-hidden="true"></span></small>
+  </h3>
   <ol>
       <li>
           $\color{red}{E[W^{(n)}(t_i)]}=?$
@@ -93,14 +103,18 @@
   <hr>
 
 
-  <h3>Quiz 1 </h3>
+  <h3>Quiz 1 
+  <small><a class="popup-ans" tabindex="0" role="button" data-toggle="popover" data-trigger="focus" data-html="true" data-content="$(1-\frac{\theta^2}{2\lambda})^{-\gamma t}$">Answer</a></small>
+  <small><span class="glyphicon glyphicon-ok-circle" aria-hidden="true"></span></small>
+  </h3>
+
   <p>
     <strong>[ time change Brownian motion ]</strong> 
     Last week in class we defined that the (marginal) distribution of the Brownian motion is $B_t ∼\mathcal{N}(0, t)$ and its moment generating function. <br>
     Given a Gamma process (see <a target="_blank" href="https://en.wikipedia.org/wiki/Gamma_process">Wiki definition</a>) $\Gamma(t;\gamma,\lambda)$, we now consider a time change Brownian motion 
     $W_{\Gamma(t;\gamma,\lambda)}$. The random time o’clock $\Gamma(t;\gamma,\lambda)$ is used to model rapid or slow market activity during a trading day. What is the moment generating function of $W_{\Gamma(t;\gamma,\lambda)}$? <br>
     That is, what is $E[e^{\theta W_{\Gamma(t;\gamma,\lambda)}}]$? (Hint: conditioning on the gamma process is useful.)
-</p>
+  </p>
 
 <p class="text-danger"><del><em>due date: 10/19 24:00</em></del></p>
 <hr>
@@ -108,7 +122,7 @@
 <ol>
   <li>
     (a) ch2-exercise #1<br>
-    (b) Goodness of fit test (normality test)
+    (b) goodness of fit test (normality test)
 </li>
 <li>
     ch2-exercise #2
@@ -159,6 +173,10 @@
 target="_blank" style="font-family: sans-serif, Arial, Helvetica; 
 font-size: 12px; color: #6E7A76; text-decoration: underline ;"><em>Web Tracker                                        </em>
 </a>   
+<!-- Start of SimpleHitCounter Code -->
+<div align="center"><a href="http://www.simplehitcounter.com" target="_blank"><img src="http://simplehitcounter.com/hit.php?uid=1969019&f=16777215&b=0" border="0" height="18" width="83" alt="web counter"></a><br><a href="http://www.simplehitcounter.com" target="_blank" style="text-decoration:none;">web counter</a></div>
+<!-- End of SimpleHitCounter Code -->
+
 </div>
 
 </body>
